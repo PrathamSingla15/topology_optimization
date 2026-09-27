@@ -1,0 +1,23 @@
+observations:
+  - id: O01
+    timestamp: "2026-09-01T16:12+05:30"
+    provenance: ai-suggested
+    content: "Within the verified four-paper shortlist, no source combines the deck's exact reaction-diffusion corrosion, mechanics, bone-remodeling feedback, topology optimization, and matrix-free GPU execution."
+    context: "Four-paper literature review implemented and committed to literature_review.md."
+    potential_type: architecture
+    bound_to: [N01]
+    promoted: true
+    promoted_to: "logic/claims.md:C01"
+    crystallized_via: artifact-commitment
+    stale: false
+  - id: O02
+    timestamp: "2026-09-01T18:19+05:30"
+    provenance: ai-suggested
+    content: "A six-slide structure can preserve the professor's numbering by combining objectives, compact related work, and the research gap on slide 3, while reserving slide 6 for completed work or preliminary results."
+    context: "Presentation restructuring advice prepared from the professor's slide outline; the strict six-slide limit has not yet been confirmed."
+    potential_type: architecture
+    bound_to: [N02]
+    promoted: false
+    promoted_to: null
+    crystallized_via: null
+    stale: false

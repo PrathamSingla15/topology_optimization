@@ -1,0 +1,141 @@
+<mxfile host="Electron" modified="2026-09-01T00:00:00.000Z" agent="Codex" version="31.3.2" type="device">
+  <diagram id="btp-methodology" name="BTP Methodology Flow">
+    <mxGraphModel dx="1920" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="page_background" value="" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;locked=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1919" height="1079" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="Methodology: Degradation-Aware Implant Topology Optimization" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=32;fontStyle=1;fontColor=#123B67;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="52" y="28" width="1810" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Healing-time corrosion–mechanics–remodeling simulation nested inside the topology-design loop" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#3E5568;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="54" y="80" width="1350" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="title_rule" value="" style="rounded=0;html=1;strokeColor=none;fillColor=#123B67;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="52" y="124" width="1816" height="4" as="geometry"/>
+        </mxCell>
+        <mxCell id="setup" value="&lt;b&gt;Problem setup &amp;amp;&lt;br&gt;initialization&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#3E5568&quot;&gt;Design domain + initial density&lt;br&gt;Loads + boundary conditions&lt;br&gt;Material properties&lt;br&gt;Corrosion + healing parameters&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#123B67;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fontColor=#123B67;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="310" width="210" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge1" value="1" style="ellipse;aspect=fixed;html=1;fillColor=#123B67;strokeColor=#123B67;fontColor=#FFFFFF;fontFamily=Arial;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="46" y="284" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="simulation" value="&lt;b&gt;Healing-time multiphysics simulation&lt;/b&gt;  |  t = 0 to T" style="swimlane;startSize=62;horizontal=1;rounded=1;arcSize=10;html=1;fillColor=#F5F9FC;swimlaneFillColor=#FFFFFF;strokeColor=#4A759B;strokeWidth=2.5;fontFamily=Arial;fontSize=20;fontColor=#123B67;align=left;spacingLeft=28;container=1;collapsible=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="275" y="175" width="720" height="585" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge2" value="2" style="ellipse;aspect=fixed;html=1;fillColor=#123B67;strokeColor=#123B67;fontColor=#FFFFFF;fontFamily=Arial;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="298" y="149" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="corrosion" value="&lt;b&gt;Reaction–diffusion&lt;br&gt;corrosion&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#315E59&quot;&gt;Evolve implant&lt;br&gt;material field&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF7F4;strokeColor=#2F8F83;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=10;fontFamily=Arial;fontSize=18;fontColor=#176B62;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="20" y="185" width="180" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="mechanics" value="&lt;b&gt;Matrix-free&lt;br&gt;mechanics&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#3E5568&quot;&gt;FE equilibrium on&lt;br&gt;current geometry&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EEF5FA;strokeColor=#4A759B;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=10;fontFamily=Arial;fontSize=18;fontColor=#123B67;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="270" y="185" width="180" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="remodeling" value="&lt;b&gt;Bone remodeling&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#6A5838&quot;&gt;Update bone density&lt;br&gt;and material properties&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#D99A2B;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=10;fontFamily=Arial;fontSize=18;fontColor=#8A5B00;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="520" y="185" width="180" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="advance_time" value="Advance healing time  t ← t + Δt" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#607F9C;strokeWidth=1.8;dashed=1;align=center;verticalAlign=middle;spacing=8;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#3E5568;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="275" y="435" width="190" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="coupling_note" value="Assumption: corrosion is not stress-driven" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=2;fontColor=#3E5568;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="410" y="528" width="290" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_degraded_state" value="Degraded geometry&lt;br&gt;&amp;amp; stiffness" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D7E2EB;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#123B67;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="185" y="120" width="100" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_mechanical_stimulus" value="Mechanical&lt;br&gt;stimulus" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D7E2EB;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#123B67;shadow=0;" vertex="1" parent="simulation">
+          <mxGeometry x="435" y="120" width="100" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="evaluation" value="&lt;b&gt;Objective &amp;amp;&lt;br&gt;constraint evaluation&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#3E5568&quot;&gt;Mechanical support / integrity&lt;br&gt;throughout healing&lt;br&gt;&lt;br&gt;Bone-remodeling response&lt;br&gt;&lt;br&gt;Volume + design constraints&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A759B;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fontColor=#123B67;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="310" width="205" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge3" value="3" style="ellipse;aspect=fixed;html=1;fillColor=#4A759B;strokeColor=#4A759B;fontColor=#FFFFFF;fontFamily=Arial;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1046" y="284" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="update" value="&lt;b&gt;Sensitivity &amp;amp;&lt;br&gt;topology update&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#315E59&quot;&gt;Time-dependent sensitivities&lt;br&gt;&lt;br&gt;Filter + project density&lt;br&gt;&lt;br&gt;Update topology&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F8F83;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fontColor=#176B62;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="310" width="190" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge4" value="4" style="ellipse;aspect=fixed;html=1;fillColor=#2F8F83;strokeColor=#2F8F83;fontColor=#FFFFFF;fontFamily=Arial;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1291" y="284" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="convergence" value="&lt;b&gt;Convergence?&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#6A5838&quot; size=&quot;3&quot;&gt;Design change +&lt;br&gt;objective / constraints&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#D99A2B;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=8;fontFamily=Arial;fontSize=20;fontColor=#8A5B00;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1495" y="365" width="155" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge5" value="5" style="ellipse;aspect=fixed;html=1;fillColor=#D99A2B;strokeColor=#D99A2B;fontColor=#FFFFFF;fontFamily=Arial;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="330" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="optimal" value="&lt;b&gt;Optimal biodegradable&lt;br&gt;implant topology&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#DCE9F3&quot;&gt;Coordinated degradation,&lt;br&gt;mechanical support&lt;br&gt;and bone remodeling&lt;/font&gt;" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#123B67;strokeColor=#123B67;strokeWidth=2.5;align=center;verticalAlign=middle;spacing=10;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1685" y="345" width="210" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_setup_sim" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#123B67;strokeWidth=2.8;shadow=0;" edge="1" parent="1" source="setup" target="simulation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_sim_eval" value="t = T: healing history complete" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#123B67;strokeWidth=2.8;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#123B67;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.18;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="simulation" target="evaluation">
+          <mxGeometry relative="1" y="-16" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="242"/>
+              <mxPoint x="1127.5" y="242"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eval_update" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#123B67;strokeWidth=2.8;shadow=0;" edge="1" parent="1" source="evaluation" target="update">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_update_conv" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#123B67;strokeWidth=2.8;shadow=0;" edge="1" parent="1" source="update" target="convergence">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_conv_opt" value="Converged" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F8F83;strokeWidth=2.8;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#176B62;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;shadow=0;" edge="1" parent="1" source="convergence" target="optimal">
+          <mxGeometry relative="1" y="-16" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_conv_loop" value="Not converged" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#D99A2B;strokeWidth=2.8;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#8A5B00;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;shadow=0;" edge="1" parent="1" source="convergence" target="simulation">
+          <mxGeometry relative="1" y="-18" as="geometry">
+            <Array as="points">
+              <mxPoint x="1572.5" y="875"/>
+              <mxPoint x="635" y="875"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_corr_mech" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#4A759B;strokeWidth=2.3;shadow=0;" edge="1" parent="simulation" source="corrosion" target="mechanics">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_mech_remodel" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#4A759B;strokeWidth=2.3;shadow=0;" edge="1" parent="simulation" source="mechanics" target="remodeling">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_remodel_mech" value="Updated bone properties" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F8F83;strokeWidth=2.3;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#176B62;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;shadow=0;" edge="1" parent="simulation" source="remodeling" target="mechanics">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="385"/>
+              <mxPoint x="360" y="385"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_remodel_time" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#607F9C;strokeWidth=2;dashed=1;exitX=1;exitY=1;entryX=1;entryY=0.5;shadow=0;" edge="1" parent="simulation" source="remodeling" target="advance_time">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="705" y="410"/>
+              <mxPoint x="480" y="410"/>
+              <mxPoint x="480" y="462"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_time_corr" value="t &lt; T: next healing step" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#607F9C;strokeWidth=2;dashed=1;fontFamily=Arial;fontSize=16;fontStyle=1;fontColor=#3E5568;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;shadow=0;" edge="1" parent="simulation" source="advance_time" target="corrosion">
+          <mxGeometry relative="1" y="-16" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="510"/>
+              <mxPoint x="110" y="510"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

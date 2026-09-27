@@ -1,0 +1,55 @@
+entries:
+  - turn: "2026-09-01_001#1"
+    notes:
+      - "Recorded N01 as a direct decision because the user committed to implementing the approved literature-review plan."
+      - "Staged O01 as an architecture claim, then crystallized it to C01 via artifact commitment because literature_review.md depends on the bounded integration-gap statement."
+      - "Kept C01 at hypothesis: artifact commitment opens testing but does not establish field-wide support, and the shortlist is not a systematic review."
+  - turn: "2026-09-01_001#2"
+    notes:
+      - "Recorded N02 as a direct user decision: simplify visible copy, sharpen the two-part challenge, and separate member ownership by technical pillar."
+      - "Staged O02 rather than crystallizing it because the six-slide limit is inferred from the professor's numbering, not explicitly confirmed."
+      - "No logic-layer revision: the requested presentation wording does not contradict C01."
+  - turn: "2026-09-01_001#3"
+    notes:
+      - "Recorded N03 as user-revised because the user corrected the prior simplification: preserve the earlier explanatory depth while lowering vocabulary difficulty."
+      - "No staged observation or logic revision was needed; this is a presentation-copy preference, not a research claim."
+  - turn: "2026-09-01_001#4"
+    notes:
+      - "Recorded N04 as a direct user decision because 'Implement the plan' committed the previously approved nested dual-loop methodology architecture to an editable artifact."
+      - "Recorded N05 as a direct verification experiment because the diagram was rendered and independently checked against explicit structural, visual, and technical gates."
+      - "Did not stage a new architecture observation: N04 already preserves the chosen component relationships without asserting a broader empirical claim."
+      - "No logic-layer revision: the implemented diagram is consistent with the existing project problem and does not change C01."
+  - turn: "2026-09-01_001#5"
+    notes:
+      - "Recorded N06 as user-revised because the user rejected the detailed slide representation as too complex while preserving the underlying project method."
+      - "Recorded N07 as a direct verification experiment after the simple diagram passed structural, visual, and content checks."
+      - "N06 does not contradict N04: N04 records the technical architecture; N06 records the presentation abstraction used to communicate it."
+      - "No logic-layer revision or staged observation was needed because the turn changed communication granularity, not the research claim or physical model."
+  - turn: "2026-09-02_001#1"
+    notes:
+      - "Recorded N08 as a direct user selection of the earlier detailed methodology artifact over the simplified alternative."
+      - "Recorded N09 as user-revised because the user constrained the redesign to visual polish while explicitly preserving the timeline's structure and content."
+      - "Recorded N10 as a direct verification experiment after exact-content, geometry, XML, branding, anti-pattern, and visual checks passed."
+      - "No staged observation or logic-layer revision: the turn committed presentation artifacts and preferences without changing the research model or C01."
+  - turn: "2026-09-02_001#2"
+    notes:
+      - "Recorded N11 as a direct user decision because the request committed two distinct presenter-preparation artifacts with different purposes."
+      - "Recorded N12 as a direct verification experiment after a twelve-item automated check and an independent technical review both passed."
+      - "Did not stage new claims: the handbook preserves open modeling choices and carefully bounds the literature gap to the selected shortlist."
+      - "No logic-layer revision: the new guides explain and qualify the existing project model without changing C01."
+  - turn: "2026-09-02_001#3"
+    notes:
+      - "Recorded N13 as user-revised because the user corrected the equation-rendering format of the committed handbook artifact."
+      - "Recorded N14 as a direct verification experiment after delimiter balance, LaTeX scope, legacy syntax, and control-character checks passed."
+      - "No staged observation or logic-layer revision: this turn corrected artifact rendering without changing the mathematical model or C01."
+  - turn: "2026-09-27_001#1"
+    notes:
+      - "Recorded N15 as a direct pivot because the user is moving from presentation preparation to empirical GPU setup and tutorial validation in a new environment."
+      - "Kept the relationship between deal.II MatrixFree and Kokkos as an open compatibility question for the next agent rather than asserting an integration that has not yet been verified on the allotted system."
+      - "No staged observation or logic-layer revision: this turn establishes the next experimental phase but provides no implementation evidence yet."
+  - turn: "2026-09-27_001#2"
+    notes:
+      - "Recorded N16 as a direct user decision because the user explicitly selected one Git repository as the home for all completed BTP and ARA artifacts."
+      - "Excluded the parent .DS_Store because it is operating-system metadata rather than a project artifact."
+      - "No staged observation or logic-layer revision: repository consolidation changes artifact location, not the research model or evidence."
+      - "Recorded N17 as a resolved experiment: the publication command was executed and failed specifically because the authenticated GitHub account has push=false on the target repository."

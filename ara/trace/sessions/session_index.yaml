@@ -1,0 +1,22 @@
+sessions:
+  - id: "2026-09-01_001"
+    date: "2026-09-01"
+    summary: "Created presentation content and a verified, simplified methodology flow."
+    turn_count: 5
+    events_count: 9
+    claims_touched: [C01]
+    open_threads: 2
+  - id: "2026-09-02_001"
+    date: "2026-09-02"
+    summary: "Finalized presenter materials and corrected the handbook's Markdown equation rendering."
+    turn_count: 3
+    events_count: 7
+    claims_touched: []
+    open_threads: 3
+  - id: "2026-09-27_001"
+    date: "2026-09-27"
+    summary: "Prepared the GPU-work handoff, consolidated all artifacts, and identified a GitHub write-permission blocker."
+    turn_count: 2
+    events_count: 3
+    claims_touched: []
+    open_threads: 1

@@ -1,0 +1,296 @@
+tree:
+  - id: N01
+    type: decision
+    title: "Implement the approved four-paper literature review"
+    provenance: user
+    timestamp: "2026-09-01T16:12+05:30"
+    choice: >
+      Create a reusable Markdown literature review and matching PPT-ready text from the
+      approved shortlist, including verified publication and method-transfer caveats.
+    alternatives:
+      - "Return chat text without creating a Markdown file"
+      - "Exclude the online 2026 article because of its future issue assignment"
+    evidence:
+      - "User instruction: Implement the plan"
+      - "Approved plan from the preceding turn"
+    status: resolved
+    also_depends_on: []
+    children: []
+  - id: N02
+    type: decision
+    title: "Simplify the presentation and divide ownership by technical pillar"
+    provenance: user
+    timestamp: "2026-09-01T18:19+05:30"
+    choice: >
+      Use simple audience-facing literature summaries, organize the three member roles into
+      distinct technical sections, and restate the project challenge around load support and
+      controlled biodegradation.
+    alternatives:
+      - "Keep the existing specialist terminology and loosely defined member roles"
+    evidence:
+      - "User requested simpler wording to avoid unnecessary follow-up questions"
+      - "User requested a balanced three-section role distribution"
+      - "User relayed the professor's suggested mechanical-support challenge framing"
+    status: resolved
+    also_depends_on: [N01]
+    children: []
+  - id: N03
+    type: decision
+    title: "Simplify literature wording without reducing its explanatory depth"
+    provenance: user-revised
+    timestamp: "2026-09-01T18:30+05:30"
+    choice: >
+      Keep the literature-review points close to the earlier two-sentence summaries in
+      length and content, while replacing difficult wording with plain language.
+    alternatives:
+      - "Use the shorter one-line summaries proposed in the previous turn"
+      - "Keep the earlier technical wording unchanged"
+    evidence:
+      - "User correction: make the points simple, but not too short"
+    status: resolved
+    also_depends_on: [N02]
+    children: []
+  - id: N04
+    type: decision
+    title: "Adopt a nested dual-loop methodology architecture"
+    provenance: user
+    timestamp: "2026-09-01T23:37+05:30"
+    choice: >
+      Implement the methodology as an inner healing-time corrosion–mechanics–remodeling
+      simulation nested inside an outer topology-optimization loop, with corrosion updating
+      mechanics, mechanics and remodeling exchanging state, and no stress-driven corrosion.
+    alternatives:
+      - "Keep the original five-card linear flow with an implicit healing-time loop"
+      - "Add a two-way stress-assisted corrosion coupling"
+    evidence:
+      - "User instruction: Implement the approved methodology-diagram plan"
+      - "btp-methodology-flow.drawio"
+      - "btp-methodology-flow.drawio.svg"
+    status: resolved
+    also_depends_on: [N02]
+    children: []
+  - id: N05
+    type: experiment
+    title: "Verify the methodology diagram against the approved architecture"
+    provenance: ai-executed
+    timestamp: "2026-09-01T23:37+05:30"
+    result: >
+      The revised native draw.io source and embedded-editable SVG passed XML validation,
+      exact 1920-by-1080 export checks, requirement review, anti-pattern review, and visual
+      quality review; all eleven connectors are orthogonal and have geometry.
+    evidence:
+      - "btp-methodology-flow.drawio"
+      - "btp-methodology-flow.drawio.svg"
+      - "/tmp/btp-methodology-flow-root-final.png"
+      - "xmllint --noout on both deliverables"
+      - "draw.io Desktop 31.3.2 PNG export at 1920 by 1080"
+    status: resolved
+    also_depends_on: [N04]
+    children: []
+  - id: N06
+    type: decision
+    title: "Replace the detailed methodology slide with a simple high-level flow"
+    provenance: user-revised
+    timestamp: "2026-09-01T23:56+05:30"
+    choice: >
+      Present the methodology as six readable stages with one feedback loop, collapsing the
+      detailed corrosion–mechanics–remodeling coupling into a single healing-simulation card
+      while retaining reaction-diffusion corrosion, matrix-free GPU mechanics, and bone remodeling.
+    alternatives:
+      - "Use the detailed nested dual-loop diagram as the presentation slide"
+      - "Remove the computational-method details entirely"
+    evidence:
+      - "User correction: the detailed diagram is too complex and should be much simpler"
+      - "btp-methodology-flow-simple.drawio"
+      - "btp-methodology-flow-simple.drawio.svg"
+    status: resolved
+    also_depends_on: [N04, N05]
+    children: []
+  - id: N07
+    type: experiment
+    title: "Verify the simplified methodology diagram"
+    provenance: ai-executed
+    timestamp: "2026-09-01T23:56+05:30"
+    result: >
+      The simplified six-stage diagram passed XML, exact 1920-by-1080 export, content,
+      anti-pattern, and visual-quality checks with six orthogonal connectors and one
+      unambiguous convergence feedback loop.
+    evidence:
+      - "btp-methodology-flow-simple.drawio"
+      - "btp-methodology-flow-simple.drawio.svg"
+      - "/tmp/btp-methodology-flow-simple-final.png"
+      - "xmllint --noout on both simplified deliverables"
+      - "draw.io Desktop 31.3.2 PNG export at 1920 by 1080"
+    status: resolved
+    also_depends_on: [N06]
+    children: []
+  - id: N08
+    type: decision
+    title: "Use the earlier detailed methodology diagram"
+    provenance: user
+    timestamp: "2026-09-02T01:02+05:30"
+    choice: >
+      Use the earlier nested dual-loop methodology diagram rather than the later simplified
+      six-stage version for the presentation.
+    alternatives:
+      - "Use the simplified methodology diagram"
+    evidence:
+      - "User statement: chose the earlier one"
+      - "btp-methodology-flow.drawio"
+      - "btp-methodology-flow.drawio.svg"
+    status: resolved
+    also_depends_on: [N04, N06]
+    children: []
+  - id: N09
+    type: decision
+    title: "Polish the timeline without changing its information structure"
+    provenance: user-revised
+    timestamp: "2026-09-02T01:02+05:30"
+    choice: >
+      Preserve both timeline headings, the eight-row Gantt, the eight connected lower cards,
+      all phase wording and durations, and the IIT branding while improving projection
+      visibility with a crisp technical Gantt and refined phase colors.
+    alternatives:
+      - "Remove duplicated phase cards or one heading"
+      - "Convert the timeline to a different slide structure"
+      - "Use a mostly monochrome IIT navy treatment"
+    evidence:
+      - "User requested visibility and color improvements without structural or content changes"
+      - "User selected the source-deck aspect ratio, refined phase colors, and crisp technical Gantt route"
+      - "btp-project-timeline.drawio"
+      - "btp-project-timeline.drawio.svg"
+    status: resolved
+    also_depends_on: [N02]
+    children: []
+  - id: N10
+    type: experiment
+    title: "Verify the redesigned project timeline"
+    provenance: ai-executed
+    timestamp: "2026-09-02T01:02+05:30"
+    result: >
+      The editable draw.io timeline and embedded-editable SVG passed exact-content,
+      week-geometry, XML, branding, visibility, anti-pattern, and visual-quality checks at
+      the source-deck 1684-by-1190 aspect ratio.
+    evidence:
+      - "btp-project-timeline.drawio"
+      - "btp-project-timeline.drawio.svg"
+      - "/tmp/btp-project-timeline-root-final.png"
+      - "xmllint --noout on both timeline deliverables"
+      - "draw.io Desktop 31.3.2 PNG export at 1684 by 1190"
+    status: resolved
+    also_depends_on: [N09]
+    children: []
+  - id: N11
+    type: decision
+    title: "Create complementary project-understanding and speaking-script guides"
+    provenance: user
+    timestamp: "2026-09-02T11:39+05:30"
+    choice: >
+      Produce one detailed, plain-language technical handbook for evaluator preparation and
+      one substantial slide-by-slide presentation script from the finalized mid-term deck.
+    alternatives:
+      - "Provide only a short slide summary"
+      - "Combine technical explanations and speaking notes into one file"
+    evidence:
+      - "User requested two separate Markdown files based on BTP_Mid_term.pptx (1).pdf"
+      - "BTP_complete_project_explanation_and_evaluator_guide.md"
+      - "BTP_slide_by_slide_presentation_script.md"
+    status: resolved
+    also_depends_on: [N01, N08, N09]
+    children: []
+  - id: N12
+    type: experiment
+    title: "Verify the two presenter-preparation guides"
+    provenance: ai-executed
+    timestamp: "2026-09-02T11:39+05:30"
+    result: >
+      The handbook and speaking script passed a twelve-item structural and content check;
+      the handbook contains three Mermaid diagrams and sixty evaluator questions, the script
+      covers all eight PDF pages in order, and an independent technical audit found no remaining
+      material accuracy issues after revisions.
+    evidence:
+      - "BTP_complete_project_explanation_and_evaluator_guide.md"
+      - "BTP_slide_by_slide_presentation_script.md"
+      - "Python final Markdown verification: PASS, 12/12 checks"
+      - "Independent technical handbook and script audit"
+    status: resolved
+    also_depends_on: [N11]
+    children: []
+  - id: N13
+    type: decision
+    title: "Normalize handbook equations for Markdown math previews"
+    provenance: user-revised
+    timestamp: "2026-09-02T14:45+05:30"
+    choice: >
+      Replace unsupported display delimiters and plain-parenthesis notation with standard
+      dollar-delimited Markdown math, while preserving the handbook's technical content.
+    alternatives:
+      - "Leave the equations as unrendered LaTeX source"
+      - "Replace equations with plain-text descriptions"
+    evidence:
+      - "User correction: equations were not properly rendered in the Markdown preview"
+      - "BTP_complete_project_explanation_and_evaluator_guide.md"
+    status: resolved
+    also_depends_on: [N11, N12]
+    children: []
+  - id: N14
+    type: experiment
+    title: "Verify corrected Markdown equation syntax"
+    provenance: ai-executed
+    timestamp: "2026-09-02T14:45+05:30"
+    result: >
+      The corrected handbook passed delimiter and LaTeX-scope checks with balanced display
+      and inline math, no legacy display delimiters, and no malformed carriage-return bytes.
+    evidence:
+      - "BTP_complete_project_explanation_and_evaluator_guide.md"
+      - "Python math syntax verification: PASS"
+    status: resolved
+    also_depends_on: [N13]
+    children: []
+  - id: N15
+    type: pivot
+    title: "Move from presentation preparation to GPU feasibility validation"
+    provenance: user
+    timestamp: "2026-09-27T16:02+05:30"
+    from: "Mid-term presentation design and evaluator preparation"
+    to: "Reproducible GPU environment setup and tutorial validation for deal.II MatrixFree and Kokkos"
+    trigger: >
+      GPU allocation is available in a separate session, and the professor requested exploration
+      of the deal.II matrix-free approach and Kokkos through working GPU tutorials.
+    status: open
+    also_depends_on: [N11, N14]
+    children: []
+  - id: N16
+    type: decision
+    title: "Consolidate completed BTP artifacts in the implementation repository"
+    provenance: user
+    timestamp: "2026-09-27T16:04+05:30"
+    choice: >
+      Move every substantive completed artifact from the parent BTP workspace, including the
+      complete ARA record, into the topology_optimization Git repository and publish it on main.
+    alternatives:
+      - "Keep presentation and research artifacts outside the implementation repository"
+      - "Copy only selected presentation files"
+    evidence:
+      - "User explicitly requested moving all completed files and the ARA folder into topology_optimization"
+      - "Pre-move SHA-256 manifest at /tmp/btp_pre_move.sha256"
+    status: resolved
+    also_depends_on: [N15]
+    children: []
+  - id: N17
+    type: experiment
+    title: "Attempt to publish consolidated artifacts to origin/main"
+    provenance: ai-executed
+    timestamp: "2026-09-27T16:07+05:30"
+    result: >
+      The local root commit was created, but GitHub rejected the push with HTTP 403 because
+      the active account pratham-pfm has read-only access to PrathamSingla15/topology_optimization.
+      No alternate HTTPS account or SSH identity is configured on this machine.
+    evidence:
+      - "Local root commit: Add BTP project artifacts and research record"
+      - "git push -u origin main: HTTP 403 permission denied"
+      - "GitHub API permissions: push=false for pratham-pfm"
+      - "ssh -T git@github.com: Permission denied (publickey)"
+    status: resolved
+    also_depends_on: [N16]
+    children: []
