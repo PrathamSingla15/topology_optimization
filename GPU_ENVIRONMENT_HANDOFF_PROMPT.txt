@@ -1,0 +1,38 @@
+Continue my BTP from the topology_optimization repository available in the current workspace.
+
+Before installing or changing anything, understand the project properly. Read the final presentation PDF, the detailed evaluator guide, literature_review.md, both draw.io diagrams, and the complete ara/ research record. Then briefly explain the physical problem, governing models, optimization goal, numerical workflow, why assembled finite-element matrices become expensive, and where matrix-free GPU execution may help. Use the existing project scope; do not silently redefine it.
+
+My professor has specifically asked me to explore:
+
+1. The deal.II MatrixFree approach.
+2. Kokkos for portable GPU computation.
+3. Relevant official tutorials/examples and whether they actually run on the allotted GPU.
+
+After understanding the idea, carry out the following work autonomously:
+
+- Inspect and record the GPU model, driver, operating system, CUDA or ROCm toolchain, host compiler, CMake, MPI, available environment modules, and existing packages.
+- Use current official deal.II, Kokkos, compiler, and GPU-vendor documentation to choose mutually compatible versions. Do not guess version compatibility.
+- Determine explicitly whether the selected deal.II version uses Kokkos for the relevant MatrixFree GPU path, exposes a different portable backend, or requires deal.II MatrixFree and Kokkos to be evaluated as separate approaches. Do not claim that they integrate unless the documentation and a working build demonstrate it.
+- Create a clean and reproducible environment using the most appropriate mechanism available on this machine. Avoid system-wide changes when a user-local environment is sufficient.
+- Build and run a minimal Kokkos example with the GPU backend enabled. Capture output proving which execution space/device was used.
+- Identify the most relevant officially supported deal.II matrix-free tutorial or example for the installed version. Build and run a small smoke test first, then a representative case if resources permit.
+- Confirm whether each example ran on the CPU or GPU. A successful compilation alone is not proof of GPU execution.
+- Record failures, error messages, fixes, configuration flags, and unsupported combinations. Do not hide unsuccessful attempts.
+- Compare CPU and GPU timings only under comparable settings, including problem size, polynomial degree, precision, iteration count, and synchronization. Do not claim acceleration without measured evidence.
+- Explain how the verified approach could later support our coupled biodegradable bone-implant topology-optimization workflow, especially repeated finite-element operator applications and iterative solves. Clearly separate what has been demonstrated from what is only proposed.
+
+Keep every new artifact inside this repository. Use a clear structure such as gpu_setup/ with setup scripts, environment manifests, source examples, logs, results, and a README. Do not commit generated build directories, large binaries, downloaded dependencies, credentials, or machine-specific secrets.
+
+Continue the existing ara/ record for important decisions, experiments, evidence, failures, and open questions instead of creating a separate research history. Preserve existing files and user changes.
+
+Final deliverables must include:
+
+- A concise system and dependency inventory.
+- Reproducible setup/build/run commands or scripts.
+- A compatibility table for deal.II, Kokkos, compiler, and GPU backend versions.
+- Logs proving whether each tutorial used the GPU.
+- A results table showing pass, fail, or blocked status for every attempted example.
+- Any valid CPU/GPU timing comparison, with test conditions.
+- A simple explanation of what was learned and the next implementation step for the BTP.
+
+Do not stop after writing a plan. Implement the environment, run the examples, diagnose failures methodically, and verify every success claim using fresh command output. Commit the reproducible files and documentation when verification is complete, but do not push secrets, large generated artifacts, or misleading claims.

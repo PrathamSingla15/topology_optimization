@@ -294,3 +294,21 @@ tree:
     status: resolved
     also_depends_on: [N16]
     children: []
+  - id: N18
+    type: decision
+    title: "Store a repository-aware GPU-session handoff prompt"
+    provenance: user-revised
+    timestamp: "2026-09-27T16:16+05:30"
+    choice: >
+      Update the next-session instructions to treat topology_optimization as the self-contained
+      project repository, continue its ARA history, verify deal.II MatrixFree and Kokkos rather
+      than assuming integration, and preserve reproducible GPU evidence inside the repository.
+    alternatives:
+      - "Reuse the earlier conversational prompt without repository-specific instructions"
+      - "Leave the handoff prompt only in chat"
+    evidence:
+      - "GPU_ENVIRONMENT_HANDOFF_PROMPT.txt"
+      - "User requested any final-prompt updates and a saved text-file copy in the repository"
+    status: resolved
+    also_depends_on: [N15, N16, N17]
+    children: []
