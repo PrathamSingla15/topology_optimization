@@ -15,8 +15,8 @@ sessions:
     open_threads: 3
   - id: "2026-09-27_001"
     date: "2026-09-27"
-    summary: "Consolidated the BTP repository, prepared its GPU-session handoff prompt, and identified a GitHub write-permission blocker."
+    summary: "Consolidated and published the BTP repository with a verified GPU-session handoff prompt."
     turn_count: 3
-    events_count: 4
+    events_count: 5
     claims_touched: []
-    open_threads: 2
+    open_threads: 1

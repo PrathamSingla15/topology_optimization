@@ -312,3 +312,17 @@ tree:
     status: resolved
     also_depends_on: [N15, N16, N17]
     children: []
+  - id: N19
+    type: experiment
+    title: "Publish the consolidated repository and GPU handoff prompt"
+    provenance: ai-executed
+    timestamp: "2026-09-27T16:18+05:30"
+    result: >
+      A later push retry succeeded after GitHub write access became available; local main now
+      tracks origin/main and includes all consolidated BTP artifacts plus the saved GPU handoff prompt.
+    evidence:
+      - "git push -u origin main: new branch main -> main"
+      - "GPU_ENVIRONMENT_HANDOFF_PROMPT.txt"
+    status: resolved
+    also_depends_on: [N17, N18]
+    children: []
